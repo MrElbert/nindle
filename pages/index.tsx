@@ -24,7 +24,9 @@ export default function Home() {
 
         <div className={styles.grid}>
           <Link
-            href="https://api.notion.com/v1/oauth/authorize?client_id=460c3ffa-3d89-4a50-8458-4d4b32ec3d79&response_type=code&owner=user&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fform"
+            href={`https://api.notion.com/v1/oauth/authorize?client_id=${
+              process.env.NINDLE_CLIENT_ID as string
+            }&response_type=code&owner=user&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fform`}
             className={styles.card}
           >
             <h2>OAuth 2.0 &rarr;</h2>

@@ -1,14 +1,9 @@
 import styles from "../styles/Home.module.css";
 import { useStore } from "../stores/store";
-import { isPropertySignature } from "typescript";
 import { useEffect } from "react";
 import Router from "next/router";
 
 // create a react form component that returns a react element
-
-interface Props {
-  token: string;
-}
 
 export default function Form(props: any): JSX.Element {
   const accessToken = useStore((state) => state.accessToken);
@@ -29,6 +24,7 @@ export default function Form(props: any): JSX.Element {
       fullName: event.target.fullName.value,
       amazonEmail: event.target.amazonEmail.value,
       amazonPassword: event.target.amazonPassword.value,
+      notionDB: event.target.notionDB.value,
       token: accessToken ? accessToken : "no token",
     };
 
@@ -78,6 +74,24 @@ export default function Form(props: any): JSX.Element {
                   placeholder=""
                   id="fullName"
                   name="fullName"
+                />
+              </label>
+              <label className="block">
+                <span className="text-white-700">Notion database</span>
+                <input
+                  type="text"
+                  className="
+                    mt-0
+                    block
+                    w-full
+                    px-0.5
+                    border-0 border-b-2 border-gray-200
+                    focus:ring-0 focus:border-black
+                    text-black
+                  "
+                  placeholder=""
+                  id="notionDB"
+                  name="notionDB"
                 />
               </label>
               <label className="block">
@@ -185,10 +199,7 @@ export async function getServerSideProps(context: any) {
 
   var myHeaders = new Headers();
   myHeaders.append("Content-Type", "application/json");
-  myHeaders.append(
-    "Authorization",
-    "Basic NDYwYzNmZmEtM2Q4OS00YTUwLTg0NTgtNGQ0YjMyZWMzZDc5OnNlY3JldF84SEZ5Q1BpcDg5YmZpNm15QlB0UWJ0UjdlSng4Y0pCd3Rpb3lWRG95V0tH"
-  );
+  myHeaders.append("Authorization", process.env.BASIC_AUTH as string);
 
   var raw = JSON.stringify({
     grant_type: "authorization_code",

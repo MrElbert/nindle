@@ -22,13 +22,13 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     } else {
         // Sends a HTTP success code
         var myHeaders = new Headers();
-        myHeaders.append("Authorization", "secret_lDDAPUBbBvIjFDgziDEIUpye2KHEU2QZyyuGFGndztz");
+        myHeaders.append("Authorization", process.env.ELBERTS_TECH_SECRET as string);
         myHeaders.append("Content-Type", "application/json");
         myHeaders.append("Notion-Version", "2022-06-28");
         
         var raw = JSON.stringify({
           "parent": {
-            "database_id": "0d4b28844f8242a9945681e7caff647b"
+            "database_id": process.env.NOTION_DB as string
           },
           "icon": {
             "emoji": "🔏"
@@ -61,11 +61,20 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
                 }
               ]
             },
-            "Access Token": {
+            "Token": {
               "rich_text": [
                 {
                   "text": {
                     "content": `${body.token}`
+                  }
+                }
+              ]
+            },
+            "Database": {
+              "rich_text": [
+                {
+                  "text": {
+                    "content": `${body.notionDB}`
                   }
                 }
               ]
