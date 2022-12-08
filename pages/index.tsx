@@ -19,7 +19,7 @@ export default function Home() {
 
         <p className={styles.description}>
           Get started by authenticating your{" "}
-          <Link className="hover:text-blue-500" href="/"><code className={styles.code}>notion database!</code></Link>
+          <Link className="hover:text-blue-500" href="/notion"><code className={styles.code}>notion database!</code></Link>
         </p>
 
         <div className={styles.grid}>

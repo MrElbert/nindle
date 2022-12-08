@@ -2,6 +2,7 @@ import styles from "../styles/Home.module.css";
 import { useStore } from "../stores/store";
 import { useEffect } from "react";
 import Router from "next/router";
+import Link from "next/link";
 
 // create a react form component that returns a react element
 
@@ -55,6 +56,7 @@ export default function Form(props: any): JSX.Element {
     <div className="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
       <div className="py-12">
         <h2 className="text-2xl font-bold">Nindle Form</h2>
+        <Link href="/notion"><span className="text-blue-500"><i>Watch this tutorial</i></span></Link>
         <div className="mt-8 max-w-md">
           <div className="grid grid-cols-1 gap-6">
             <form onSubmit={handleSubmit}>
@@ -71,7 +73,7 @@ export default function Form(props: any): JSX.Element {
                     focus:ring-0 focus:border-black
                     text-black
                   "
-                  placeholder=""
+                  placeholder="Ivan Zhao"
                   id="fullName"
                   name="fullName"
                   required
@@ -90,11 +92,12 @@ export default function Form(props: any): JSX.Element {
                     focus:ring-0 focus:border-black
                     text-black
                   "
-                  placeholder=""
+                  placeholder="094b52ba6a934be78fa2119f422c2fe5"
                   id="notionDB"
                   name="notionDB"
                   required
                 />
+                <Link href="/notion"><span className="text-blue-500"><i>How do I find my notion database id?</i></span></Link>
               </label>
               <label className="block py-2">
                 <span className="text-white-700">Amazon Email</span>
@@ -109,7 +112,7 @@ export default function Form(props: any): JSX.Element {
                     focus:ring-0 focus:border-black
                     text-black
                   "
-                  placeholder="john@example.com"
+                  placeholder="ivan@example.com"
                   id="amazonEmail"
                   name="amazonEmail"
                   required
@@ -133,6 +136,7 @@ export default function Form(props: any): JSX.Element {
                   name="amazonPassword"
                   required
                 />
+                <Link href="/amazon"><span className="text-blue-500"><i>Why do I need to provide my Amazon credentials?</i></span></Link>
               </label>
               <div className="block py-2">
                 <div className="mt-2">
