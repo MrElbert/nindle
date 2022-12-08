@@ -14,12 +14,12 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Nindle</a>
+          Welcome to <Link href="/about">Nindle</Link>
         </h1>
 
         <p className={styles.description}>
           Get started by authenticating your{" "}
-          <code className={styles.code}>notion database!</code>
+          <Link className="hover:text-blue-500" href="/"><code className={styles.code}>notion database!</code></Link>
         </p>
 
         <div className={styles.grid}>

@@ -54,11 +54,11 @@ export default function Form(props: any): JSX.Element {
   return (
     <div className="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
       <div className="py-12">
-        <h2 className="text-2xl font-bold">Underline</h2>
+        <h2 className="text-2xl font-bold">Nindle Form</h2>
         <div className="mt-8 max-w-md">
           <div className="grid grid-cols-1 gap-6">
             <form onSubmit={handleSubmit}>
-              <label className="block">
+              <label className="block py-2">
                 <span className="text-white-700">Full name</span>
                 <input
                   type="text"
@@ -74,9 +74,10 @@ export default function Form(props: any): JSX.Element {
                   placeholder=""
                   id="fullName"
                   name="fullName"
+                  required
                 />
               </label>
-              <label className="block">
+              <label className="block py-2">
                 <span className="text-white-700">Notion database</span>
                 <input
                   type="text"
@@ -92,9 +93,10 @@ export default function Form(props: any): JSX.Element {
                   placeholder=""
                   id="notionDB"
                   name="notionDB"
+                  required
                 />
               </label>
-              <label className="block">
+              <label className="block py-2">
                 <span className="text-white-700">Amazon Email</span>
                 <input
                   type="email"
@@ -110,9 +112,10 @@ export default function Form(props: any): JSX.Element {
                   placeholder="john@example.com"
                   id="amazonEmail"
                   name="amazonEmail"
+                  required
                 />
               </label>
-              <label className="block">
+              <label className="block py-2">
                 <span className="text-white-700">Amazon Password</span>
                 <input
                   type="text"
@@ -128,42 +131,10 @@ export default function Form(props: any): JSX.Element {
                   placeholder="********"
                   id="amazonPassword"
                   name="amazonPassword"
+                  required
                 />
               </label>
-              <label className="block">
-                <span className="text-white-700">
-                  How often do you want Nindle to work?
-                </span>
-                <select
-                  className="
-                    block
-                    w-full
-                    mt-0
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                  "
-                >
-                  <option>Once a day</option>
-                  <option>Once a week</option>
-                  <option>Once a month</option>
-                </select>
-              </label>
-              <label className="block">
-                <span className="text-white-700">Additional details</span>
-                <textarea
-                  className="
-                    mt-0
-                    block
-                    w-full
-                    px-0.5
-                    border-0 border-b-2 border-gray-200
-                    focus:ring-0 focus:border-black
-                    text-black
-                  "
-                ></textarea>
-              </label>
-              <div className="block">
+              <div className="block py-2">
                 <div className="mt-2">
                   <div>
                     <label className="inline-flex items-center">
@@ -174,6 +145,7 @@ export default function Form(props: any): JSX.Element {
                           text-black
                           focus:border-gray-300 focus:ring-black
                         "
+                        required
                       />
                       <span className="ml-2">
                         I consent to Nindle accessing my Amazon account
@@ -182,7 +154,7 @@ export default function Form(props: any): JSX.Element {
                   </div>
                 </div>
               </div>
-              <button className="text-white pt-10" type="submit">
+              <button className="text-white pt-12 hover:text-blue-500" type="submit">
                 Submit
               </button>
             </form>
