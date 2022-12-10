@@ -17,7 +17,7 @@ const Notion = () => {
         Where does Nindle come in?
       </h1>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
-        In the context of Nindle, a Notion database is a digital database that is used to store and manage the user's Kindle highlights. Nindle is an app that syncs the user's Kindle highlights with a Notion database, allowing them to access and organize their highlights in a single, centralized location.
+        In the context of Nindle, a Notion database is a digital database that is used to store and manage the user&apos;s Kindle highlights. Nindle is an app that syncs the user&apos;s Kindle highlights with a Notion database, allowing them to access and organize their highlights in a single, centralized location.
       </p>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
         <Link className="text-blue-500" href="/">Watch this tutorial!</Link>

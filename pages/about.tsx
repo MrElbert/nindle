@@ -14,7 +14,7 @@ const About = () => {
         Additionally, using a database like Notion allows users to add their own notes and comments to the highlights, which can be useful for studying, writing, or sharing with others. This can help users to better understand and retain the information from the books they have read, and can provide a convenient way to access and share important ideas and insights from their reading.
       </p>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
-        Overall, Nindle's ability to sync Kindle highlights with a Notion database offers a number of useful features and benefits that can help users to better manage, organize, and make use of their reading highlights.
+        Overall, Nindle&apos;s ability to sync Kindle highlights with a Notion database offers a number of useful features and benefits that can help users to better manage organize, and make use of their reading highlights.
       </p>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
         <Link className="text-blue-500" href="/">Try it out for yourself!</Link>

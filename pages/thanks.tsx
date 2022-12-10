@@ -13,7 +13,7 @@ const Thanks = () => {
         As a reminder, Nindle will automatically sync your Kindle highlights every day, so you can always have the latest and most up-to-date information available in your Notion database. We hope that this feature will make it even easier for you to access and use your highlights in a way that is most useful and relevant to you.
       </p>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
-        Once again, thank you for using Nindle. We value your feedback and appreciate your support. If you have any suggestions or ideas for how we can improve our app, please don't hesitate to let us know. We are constantly working to make Nindle the best it can be, and we are grateful to have users like you who help us to do that. Have a great day!
+        Once again, thank you for using Nindle. We value your feedback and appreciate your support. If you have any suggestions or ideas for how we can improve our app, please don&apos;t hesitate to let us know. We are constantly working to make Nindle the best it can be, and we are grateful to have users like you who help us to do that. Have a great day!
       </p>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
         <Link className="text-blue-500" href="/">Back to home!</Link>
