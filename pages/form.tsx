@@ -180,7 +180,7 @@ export async function getServerSideProps(context: any) {
   var raw = JSON.stringify({
     grant_type: "authorization_code",
     code: code,
-    redirect_uri: "http://localhost:3000/form",
+    redirect_uri: "https://nindle.vercel.app/form",
   });
 
   var requestOptions = {
