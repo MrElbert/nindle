@@ -26,7 +26,7 @@ export default function Home() {
           <Link
             href={`https://api.notion.com/v1/oauth/authorize?client_id=${
               process.env.NINDLE_CLIENT_ID as string
-            }&response_type=code&owner=user&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2Fform`}
+            }&response_type=code&owner=user&redirect_uri=https%3A%2F%2Fnindle.vercel.app%2Fform`}
             className={styles.card}
           >
             <h2>OAuth 2.0 &rarr;</h2>
