@@ -25,13 +25,14 @@ export default function Form(props: any): JSX.Element {
       fullName: event.target.fullName.value,
       amazonEmail: event.target.amazonEmail.value,
       amazonPassword: event.target.amazonPassword.value,
-      amazonPasswordValidation: event.target.amazonPassword.value,
+      amazonPasswordValidation: event.target.amazonPasswordValidation.value,
       notionDB: event.target.notionDB.value,
       token: accessToken ? accessToken : "no token",
     };
 
+    // check if amazon password and amazon password validation are the same
     if (data.amazonPassword !== data.amazonPasswordValidation) {
-      alert("Passwords do not match");
+      alert("Amazon passwords do not match");
       return;
     }
 
