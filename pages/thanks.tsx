@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image";
 
 const Thanks = () => {
   return (
@@ -18,6 +19,7 @@ const Thanks = () => {
       <p className="text-gray-600 dark:text-gray-400 mb-8">
         <Link className="text-blue-500" href="/">Back to home!</Link>
       </p>
+      <Image className="rounded pb-8" src="/donate.png" alt="Nindler" width={200} height={200} />
     </div>
   )
 }
