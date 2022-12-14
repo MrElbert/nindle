@@ -13,8 +13,7 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-
-        <Image className="rounded-md" src="/Nindler.png" alt="Nindler" width={200} height={200} />
+        <Image className="rounded pb-8" src="/Nindler.png" alt="Nindler" width={200} height={200} />
 
         <h1 className={styles.title}>
           Welcome to <Link href="/about">Nindle</Link>
