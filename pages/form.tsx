@@ -62,7 +62,7 @@ export default function Form(props: any): JSX.Element {
   return (
     <div className="max-w-xl mx-auto py-12 divide-y md:max-w-4xl">
       <div className="py-12">
-        <h2 className="text-2xl font-bold">Nindlsdfsdf Form</h2>
+        <h2 className="text-2xl font-bold">Nindle Form</h2>
         <Link href="/notion"><span className="text-blue-500"><i>Watch this tutorial</i></span></Link>
         <div className="mt-8 max-w-md">
           <div className="grid grid-cols-1 gap-6">
