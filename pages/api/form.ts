@@ -18,7 +18,7 @@ export default function handler(req: NextApiRequest, res: NextApiResponse<Data>)
     // and returns early if they are not found
     if (!body.fullName || !body.amazonEmail || !body.amazonPassword) {
       // Sends a HTTP bad request error code
-      return res.status(400).json({ data: 'Some data is missing in the body' })
+      return res.status(400).json({ data: 'Some data is missing in the body.' })
     } else {
         // Sends a HTTP success code
         var myHeaders = new Headers();
