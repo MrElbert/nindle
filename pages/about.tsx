@@ -17,7 +17,7 @@ const About = () => {
         Overall, Nindle&apos;s ability to sync Kindle highlights with a Notion database offers a number of useful features and benefits that can help users to better manage organize, and make use of their reading highlights.
       </p>
       <p className="text-gray-600 dark:text-gray-400 mb-8">
-        <Link className="text-blue-500" href="https://youtu.be/LkVeFpL3FPU">Try it out for yourself!</Link>
+        <Link className="text-blue-500" href="/">Try it out for yourself!</Link>
       </p>
     </div>
   )
